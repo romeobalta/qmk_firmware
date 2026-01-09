@@ -39,4 +39,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define SPLIT_TRANSPORT_MIRROR
 #endif
 
-#define DIODE_DIRECTION COL2ROW
+#define DIODE_DIRECTION ROW2COL

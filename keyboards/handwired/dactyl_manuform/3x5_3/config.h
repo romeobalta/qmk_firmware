@@ -18,13 +18,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "config_common.h"
 
-#define PRODUCT_ID      0x3536
-#define DEVICE_VER      0x0003
+#define PRODUCT_ID 0x3536
+#define DEVICE_VER 0x0003
 #ifdef MANUFACTURER
- #undef MANUFACTURER
+#    undef MANUFACTURER
 #endif
-#define MANUFACTURER    DLFord
-#define PRODUCT         Dactyl Minidox (3x5+3)
+#define MANUFACTURER DLFord
+#define PRODUCT Dactyl Minidox(3x5 + 3)
 
 // Communication
 // #define USE_I2C
@@ -36,16 +36,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_COLS 5
 
 // wiring of each half
-#define MATRIX_COL_PINS { C6, D7, E6, B4, B5 }
-#define MATRIX_ROW_PINS { B1, B3, B2, B6 }
+#define MATRIX_COL_PINS \
+    { C6, D7, E6, B4, B5 }
+#define MATRIX_ROW_PINS \
+    { B1, B3, B2, B6 }
 
 #define DIODE_DIRECTION ROW2COL
 
 // WS2812 RGB LED strip input and number of LEDs
 #define RGB_DI_PIN D3
 #define DRIVER_LED_TOTAL 36
-#define RGB_MATRIX_SPLIT { 18, 18 }
-#define RGB_MATRIX_CENTER { 133, 54 }
+#define RGB_MATRIX_SPLIT \
+    { 18, 18 }
+#define RGB_MATRIX_CENTER \
+    { 133, 54 }
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #undef LOCKING_SUPPORT_ENABLE
@@ -54,3 +58,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Enables This makes it easier for fast typists to use dual-function keys */
 #undef PERMISSIVE_HOLD
+
+#define TAPPING_TERM 180
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_FORCE_HOLD
+#define PERMISSIVE_HOLD
